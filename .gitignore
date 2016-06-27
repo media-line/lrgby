@@ -1,0 +1,16 @@
+.idea/
+.idea/copyright/
+.idea/deployment.xml
+.idea/lrgby.iml
+.idea/modules.xml
+.idea/workspace.xml
+bin/
+cache/
+cli/
+configuration.php
+logs/
+tmp/
+.idea/misc.xml
+.idea/vcs.xml
+/administrator/cache/
+web.config.txt
