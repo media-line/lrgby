@@ -1,0 +1,87 @@
+/* Copyright http://codematrix.ru/ Alex Voloh, Elena Kryukova */
+/* License: GNU/GPL v.2 or later */
+/* Non-commercial */
+.codegallery {
+	position: relative;
+	width: 100% !important;
+	background: transparent;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	/*box-shadow: #000 0 0 50px 0;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.codeprev, .previmage{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10%;
+	height: 100%;
+	background: #141516;
+	opacity: 0.3;
+	z-index: 100;
+}
+
+.codenext, .nextimage {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 10%;
+	height: 100%;
+	background: #141516;
+	opacity: 0.3;
+	z-index: 100;
+}
+
+.previmage, .nextimage {
+	cursor: pointer;
+	background-color: transparent !important;
+	background-color: red !important;
+	z-index: 200;
+	height: 35%;
+	position: absolute;
+	top: 65%;
+}
+
+.previmage:hover, .nextimage:hover {
+	opacity: 0.8;
+}
+
+.imgtooltip {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	background: #141516;
+	color: #fff;
+	padding: 10px;
+	font-size: 12pt;
+	text-transform: uppercase;
+	font-family: arial, sans-serif;
+	opacity: 0.8 !important;
+	height: 35% !important;
+	display: block !important;
+	overflow: hidden !important;
+}
+
+.imgtooltip div {
+	opacity: 1 !important;
+	text-shadow: none !important;
+}
+
+.codeimage {
+	float: left;
+	z-index: 0;
+}
+
+	.codeimage img {
+		/*width: 100% !important;*/
+	}
+
+.carousel {
+	position: absolute !important;
+	/*width: 100% !important;*/
+}

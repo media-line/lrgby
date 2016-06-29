@@ -96,7 +96,7 @@ body {
     #Слайдер (Slider)
 \*------------------------------------*/
 .slider {
-    background-color: #7F007F;
+    background-color: transparent;
 }
 
 
@@ -108,10 +108,13 @@ body {
 \*------------------------------------*/
 .content {
     background-color: #945904;
+    padding: 0;
 }
 
 .sqr-block {
     background-color: #aa1111;
+    height: auto;
+    padding: 1.5%;
 }
 
 
@@ -122,17 +125,93 @@ body {
     #Подвал (Footer)
 \*------------------------------------*/
 .footer {
-    background-color: #859900;
+    background-color: transparent;
+    height: auto;
 }
 
 .inform {
-    background-color: chocolate;
+    background-color: transparent;
+    padding: 1.2% 0;
 }
 
 .contacts {
-    background-color: darkviolet;
+    background-color: transparent;
+    color: #dedede;
+    font-size: 110%;
+    padding: 4.1% 15px;
 }
 
 .copyright {
-    background-color: darkred;
+    background-color: transparent;
+    padding: 0;
 }
+
+    .copyright p {
+        text-align: right;
+        margin: 0;
+        color: #dedede;
+        font-size: 130%;
+        padding: 9.4% 0;
+    }
+
+        .copyright p a {
+            color: #dedede;
+            text-decoration: underline;
+        }
+
+        .copyright p a:hover {
+            text-decoration: none;
+        }
+
+
+
+
+
+/*------------------------------------*\
+    #Главное меню (Main menu)
+\*------------------------------------*/
+.main-menu {
+    width: 74px;
+    position: fixed;
+    top: 27%;
+    right: 0;
+}
+
+.nav-pills > li {
+    float: right;
+    width: 62px;
+    height: auto;
+    background-color: #fff;
+}
+
+    .nav-pills > li:hover, .nav-pills > li.active {
+        background-color: #000;
+        width: 165px;
+    }
+
+        .nav-pills > li span {
+            display: none;
+        }
+
+        .nav-pills > li:hover span, .nav-pills > li.active span {
+            display: inline-block;
+            max-width: 80px;
+        }
+
+        .nav-pills > li a {
+            background-color: #fff;
+            color: #000;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        .nav-pills > li:hover a, .nav-pills > li.active a {
+            background-color: #000;
+            color: #fff;
+            padding: 0;
+        }
+
+            .nav > li > a > img {
+                max-width: none;
+                padding-right: 5px;
+            }

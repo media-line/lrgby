@@ -89,40 +89,57 @@
 	<div class="container">
 
 		<div class="row  header">
-			<div class="col-md-3 phone">
-				<jdoc:include type="modules" name="phone" style="none" />
-			</div>
-
-			<div class="col-md-6 name">
+			<div class="name  col-xs-12  col-md-6  col-md-push-3">
 				<a href="<?php echo $this->baseurl; ?>/">
 						<?php echo $logo;?>
                 </a>
 			</div>
 
-			<div class="col-md-3 logo">
+			<div class="phone  col-xs-12  col-sm-8  col-md-3  col-md-pull-6">
+				<jdoc:include type="modules" name="phone" style="none" />
+			</div>
+
+			<div class="logo  hidden-xs  col-sm-4  col-md-3">
                 <a href="<?php echo $this->baseurl; ?>/">
-						<img src="/images/logo.png" />
+						<img class="img-responsive" src="/images/logo.png" />
                 </a>
             </div>
 		</div>
 
-		<div class="row  slider"></div>
-
-		<div class="col-md-12  content">
-
-			<div class="col-md-3 sqr-block"></div>
-			<div class="col-md-3 sqr-block"></div>
-			<div class="col-md-3 sqr-block"></div>
-			<div class="col-md-3 sqr-block"></div>
-
+		<div class="row  slider">
+			<jdoc:include type="modules" name="slider" style="xhtml" />
 		</div>
 
+        <div class="row">
+            <div class="col-md-12  content">
+
+                <div class="col-md-3  sqr-block"></div>
+                <div class="col-md-3  sqr-block"></div>
+                <div class="col-md-3  sqr-block"></div>
+                <div class="col-md-3  sqr-block"></div>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
 		<div class="row  footer">
-			<div class="col-md-2 inform"></div>
-			<div class="col-md-3 contacts"></div>
-			<div class="col-md-3 copyright"></div>
+			<div class="hidden-xs  col-sm-4  col-md-3  inform">
+                <iframe frameborder="0" height="105" marginheight="0" marginwidth="0" scrolling="no" src="http://myfin.by/scripts/informer/informer.php" width="250"></iframe>
+            </div>
+
+			<div class="col-sm-3  col-md-3  contacts">
+                <jdoc:include type="modules" name="foot-contact" style="none" />
+            </div>
+
+			<div class="col-sm-5  col-md-6  copyright">
+                <p>Разработка сайта - <a href="http://www.medialine.by" target="_blank">Медиа Лайн</a></p>
+            </div>
 		</div>
 
 	</div>
+
+<div class="main-menu">
+    <jdoc:include type="modules" name="main-menu" style="none" />
+</div>
 </body>
 </html>
