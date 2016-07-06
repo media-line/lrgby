@@ -4,10 +4,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
-
-
-
 .container {
     background-color: #0a001f;
     max-width: 1260px;
@@ -93,7 +89,7 @@ body {
 
 
 /*------------------------------------*\
-    #Слайдер (Slider)
+    #Слайдер (Slider) + стили в модуле слайдера
 \*------------------------------------*/
 .slider {
     background-color: transparent;
@@ -111,12 +107,8 @@ body {
     padding: 0;
 }
 
-.sqr-block {
-    background-color: #aa1111;
-    height: auto;
-    padding: 1.5%;
-}
 
+/*Модуль с блоками (Mod block)*/
 
 
 

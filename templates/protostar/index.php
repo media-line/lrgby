@@ -110,14 +110,11 @@
 			<jdoc:include type="modules" name="slider" style="xhtml" />
 		</div>
 
-        <div class="row">
-            <div class="col-md-12  content">
+        <div class="row  content">
+            <div>
 
-                <div class="col-md-3  sqr-block"></div>
-                <div class="col-md-3  sqr-block"></div>
-                <div class="col-md-3  sqr-block"></div>
-                <div class="col-md-3  sqr-block"></div>
-
+                <jdoc:include type="modules" name="sqr-block" style="xhtml" />
+                
             </div>
         </div>
         <div class="clearfix"></div>

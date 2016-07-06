@@ -1,0 +1,31 @@
+.block-wrapper {
+    text-align: center;
+}
+
+.item {
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.item:nth-child(1){
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.item:nth-last-child{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.item p {
+    padding: 0 15%;
+    position: absolute;
+    color: #fff;
+    top: 34%;
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.item img {
+    width: 100%;
+}
