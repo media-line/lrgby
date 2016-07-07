@@ -5,7 +5,6 @@ body {
 }
 
 .container {
-    background-color: #0a001f;
     max-width: 1260px;
     width: 100%;
 }
@@ -89,21 +88,9 @@ body {
 
 
 /*------------------------------------*\
-    #Слайдер (Slider) + стили в модуле слайдера
-\*------------------------------------*/
-.slider {
-    background-color: transparent;
-}
-
-
-
-
-
-/*------------------------------------*\
     #Контентная часть (Content)
 \*------------------------------------*/
 .content {
-    background-color: #945904;
     padding: 0;
 }
 
@@ -176,8 +163,12 @@ body {
     background-color: #fff;
 }
 
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #1e2023;
+}
+
     .nav-pills > li:hover, .nav-pills > li.active {
-        background-color: #000;
+        background-color: #1e2023;
         width: 165px;
     }
 
@@ -198,7 +189,7 @@ body {
         }
 
         .nav-pills > li:hover a, .nav-pills > li.active a {
-            background-color: #000;
+            background-color: #1e2023;
             color: #fff;
             padding: 0;
         }

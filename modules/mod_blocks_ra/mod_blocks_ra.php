@@ -13,16 +13,42 @@ defined('_JEXEC') or die;
 $document =& JFactory::getDocument();
 $document->addStyleSheet('modules/mod_blocks_ra/tmpl/css/mod_blocks.css');
 
+//подключаем js-файл модуля
+$document =& JFactory::getDocument();
+$document->addScript('modules/mod_blocks_ra/tmpl/js/mod_blocks_ra.js');
+
 //задаем количество блоков в модуле
 $qtySlides = 4;
 
 ?>
 
-<div class="block-wrapper">
-	<?php for ($i = 1; $i <= $qtySlides; $i++) { ?>
-			<div class="item  col-md-3" id="<?php echo 'block'.$i ?>">
-				<p><?php echo $params->get('txt'.$i); ?></p>
-				<img src="<?php echo $params->get('img'.$i); ?>" alt="">
-			</div>
-	<?php } ?>
+<!-- включаем слайдер только на главной странице -->
+<?php
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+if ($menu->getActive() == $menu->getDefault())
+{
+?>
+        <!-- начало "слайдера" -->
+        <div id="slider" class="row  slider  col-md-12">
+            <img class="img-responsive" id="img-slider" src="/images/blocks/big-img/slide1.png" />
+            <?php for ($i = 1; $i <= $qtySlides; $i++) { ?>
+                <p id="txt-slider" class="txt-slider<?php echo $i ?>">
+                    <?php echo $params->get('txt-sl'.$i); ?>
+                </p>
+            <?php } ?>
+        </div>
+
+<?php } ?>
+
+<!-- Начало блоков -->
+<div class="block-wrapper col-md-12">
+    <?php for ($i = 1; $i <= $qtySlides; $i++) { ?>
+        <a class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
+            <div class="block-img" id="<?php echo 'block'.$i ?>" style="background-image: url('<?php echo $params->get('img'.$i); ?>');">
+                <div class="block-hover"></div>
+                <p><?php echo $params->get('txt'.$i); ?></p>
+            </div>
+        </a>
+    <?php } ?>
 </div>

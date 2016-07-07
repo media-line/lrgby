@@ -106,15 +106,11 @@
             </div>
 		</div>
 
-		<div class="row  slider">
-			<jdoc:include type="modules" name="slider" style="xhtml" />
-		</div>
-
         <div class="row  content">
             <div>
 
                 <jdoc:include type="modules" name="sqr-block" style="xhtml" />
-                
+
             </div>
         </div>
         <div class="clearfix"></div>
@@ -135,7 +131,7 @@
 
 	</div>
 
-<div class="main-menu">
+<div class="main-menu  hidden-xs  hidden-sm">
     <jdoc:include type="modules" name="main-menu" style="none" />
 </div>
 </body>
