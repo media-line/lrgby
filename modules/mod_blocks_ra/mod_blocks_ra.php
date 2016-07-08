@@ -10,11 +10,11 @@
 defined('_JEXEC') or die;
 
 //подключаем css-файл модуля
-$document =& JFactory::getDocument();
+$document =JFactory::getDocument();
 $document->addStyleSheet('modules/mod_blocks_ra/tmpl/css/mod_blocks.css');
 
 //подключаем js-файл модуля
-$document =& JFactory::getDocument();
+$document =JFactory::getDocument();
 $document->addScript('modules/mod_blocks_ra/tmpl/js/mod_blocks_ra.js');
 
 //задаем количество блоков в модуле
@@ -33,7 +33,7 @@ if ($menu->getActive() == $menu->getDefault())
         <div id="slider" class="row  slider  col-md-12">
             <img class="img-responsive" id="img-slider" src="/images/blocks/big-img/slide1.png" />
             <?php for ($i = 1; $i <= $qtySlides; $i++) { ?>
-                <p id="txt-slider" class="txt-slider<?php echo $i ?>">
+                <p class="txt-slider" id="<?php echo 'txt-slider'.$i ?>">
                     <?php echo $params->get('txt-sl'.$i); ?>
                 </p>
             <?php } ?>

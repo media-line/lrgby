@@ -60,7 +60,7 @@
 	<jdoc:include type="head" />
 
 	<!-- jQuery -->
-	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -108,8 +108,15 @@
 
         <div class="row  content">
             <div>
+				            <?php
+				            $app = JFactory::getApplication();
+				            $menu = $app->getMenu();
+				            if ($menu->getActive() != $menu->getDefault())
+				            {
+				             echo '   <jdoc:include type="component" />';
+		            } ?>
 
-                <jdoc:include type="modules" name="sqr-block" style="xhtml" />
+		                  <jdoc:include type="modules" name="sqr-block" style="xhtml" />
 
             </div>
         </div>

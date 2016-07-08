@@ -28,25 +28,25 @@
 			<fieldset name="basic">
 				<field name="img1" type="media" label="Блок 1" />
 				<field name="txt1" type="text" size="50" label="Текст блока 1" />
-                <field name="url1" type="category" label="Ссылка блока 1" />
+                <field name="url1" type="text" label="Ссылка блока 1" />
                 <field name="img-sl1" type="media" label="Картинка для наведения на блок 1" />
                 <field name="txt-sl1" type="text" size="150" label="Текст для большой картинки 1" />
                 <field type="spacer" />
 				<field name="img2" type="media" label="Блок2" />
                 <field name="txt2" type="text" size="50" label="Текст блока 2" />
-                <field name="url2" type="category" label="Ссылка блока 2" />
+                <field name="url2" type="text" label="Ссылка блока 2" />
                 <field name="img-sl2" type="media" label="Картинка для наведения на блок 2" />
                 <field name="txt-sl2" type="text" size="150" label="Текст для большой картинки 2" />
                 <field type="spacer" />
 				<field name="img3" type="media" label="Блок3" />
                 <field name="txt3" type="text" size="50" label="Текст блока 3" />
-                <field name="url3" type="category" label="Ссылка блока 3" />
+                <field name="url3" type="text" label="Ссылка блока 3" />
                 <field name="img-sl3" type="media" label="Картинка для наведения на блок 3" />
                 <field name="txt-sl3" type="text" size="150" label="Текст для большой картинки 3" />
                 <field type="spacer" />
 				<field name="img4" type="media" label="Блок4" />
                 <field name="txt4" type="text" size="50" label="Текст блока 4" />
-                <field name="url4" type="category" label="Ссылка блока 4" />
+                <field name="url4" type="text" label="Ссылка блока 4" />
                 <field name="img-sl4" type="media" label="Картинка для наведения на блок 4" />
                 <field name="txt-sl4" type="text" size="50" label="Текст для большой картинки 4" />
 			</fieldset>

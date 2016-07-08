@@ -94,8 +94,30 @@ body {
     padding: 0;
 }
 
+.blog {
+    background-color: #ffffff;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 5%;
+}
 
-/*Модуль с блоками (Mod block)*/
+
+.item-page {
+    background-color: #ffffff;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 5%;
+}
+
+.page-header {
+    border-bottom: none;
+    padding: 0;
+    margin: 40px 0 50px;
+}
+
+    .page-header h2 {
+        font-size: 3rem;
+    }
 
 
 
@@ -154,6 +176,7 @@ body {
     position: fixed;
     top: 27%;
     right: 0;
+    z-index: 100;
 }
 
 .nav-pills > li {
@@ -198,3 +221,5 @@ body {
                 max-width: none;
                 padding-right: 5px;
             }
+
+.nav > li > a > img
