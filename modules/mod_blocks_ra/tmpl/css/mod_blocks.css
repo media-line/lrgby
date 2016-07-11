@@ -23,11 +23,11 @@
 }
 
 @media all and (min-width: 1024px)  {
-    #block1 {
+    #block0 {
         margin-left: 0;
     }
 
-    #block4 {
+    #block3 {
         margin-right: 0;
     }
 
@@ -80,7 +80,7 @@
     margin-bottom: 25px !important;
 }
 
-#txt-slider1, #txt-slider2, #txt-slider3, #txt-slider4 {
+#txt-slider0, #txt-slider1, #txt-slider2, #txt-slider3 {
     position: absolute;
     color: #fff;
     bottom: 0;
@@ -108,4 +108,8 @@
     .txt-slider {
         font-size: 1.5rem;
     }
+}
+
+.slide-active {
+    display: block !important;
 }

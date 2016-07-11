@@ -608,6 +608,13 @@
 				extension="com_content" view="article"
 			/>
 		</fieldset>
+		<fieldset>
+			<field name="article_additional" type="inputbox"
+				   label="Дополнительное поле"
+				   description="Это дополнительное поле, которое мы создали"
+				   class="inputbox" size="25"
+			/>
+		</fieldset>
 	</fields>
 
 	<field name="xreference" type="text"

@@ -119,6 +119,35 @@ body {
         font-size: 3rem;
     }
 
+.subheading-category {
+    font-size: 4rem;
+}
+
+.category-desc {
+    width: 60%;
+}
+
+    .category-desc h2 {
+        font-size: 2.08rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 25px 0;
+    }
+
+    .category-desc p {
+        font-size: 1.92rem;
+        line-height: 2;
+    }
+
+    .category-desc ul {
+        font-size: 1.6rem;
+        line-height: 2.3;
+        margin: 40px 0;
+    }
+
+p.video {
+
+}
 
 
 
@@ -221,5 +250,3 @@ body {
                 max-width: none;
                 padding-right: 5px;
             }
-
-.nav > li > a > img

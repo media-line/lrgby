@@ -31,9 +31,9 @@ if ($menu->getActive() == $menu->getDefault())
 ?>
         <!-- начало "слайдера" -->
         <div id="slider" class="row  slider  col-md-12">
-            <img class="img-responsive" id="img-slider" src="/images/blocks/big-img/slide1.png" />
-            <?php for ($i = 1; $i <= $qtySlides; $i++) { ?>
-                <p class="txt-slider" id="<?php echo 'txt-slider'.$i ?>">
+            <img class="img-responsive" id="img-slider" src="<?php echo $params->get('img-sl0'); ?>" />
+            <?php for ($i = 0; $i < $qtySlides; $i++) { ?>
+                <p class="txt-slider<?php if ($i == 0){echo ' slide-active';} ?>" id="<?php echo 'txt-slider'.$i ?>">
                     <?php echo $params->get('txt-sl'.$i); ?>
                 </p>
             <?php } ?>
@@ -41,9 +41,10 @@ if ($menu->getActive() == $menu->getDefault())
 
 <?php } ?>
 
+
 <!-- Начало блоков -->
 <div class="block-wrapper col-md-12">
-    <?php for ($i = 1; $i <= $qtySlides; $i++) { ?>
+    <?php for ($i = 0; $i < $qtySlides; $i++) { ?>
         <a class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
             <div class="block-img" id="<?php echo 'block'.$i ?>" style="background-image: url('<?php echo $params->get('img'.$i); ?>');">
                 <div class="block-hover"></div>
