@@ -56,11 +56,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
+    	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
-
-	<!-- jQuery -->
-	<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -113,7 +113,7 @@
 				            $menu = $app->getMenu();
 				            if ($menu->getActive() != $menu->getDefault())
 				            {
-				             echo '   <jdoc:include type="component" />';
+				             echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" />';
 		            } ?>
 
 		                  <jdoc:include type="modules" name="sqr-block" style="xhtml" />
@@ -124,7 +124,9 @@
 
 		<div class="row  footer">
 			<div class="hidden-xs  col-sm-4  col-md-3  inform">
-                <iframe frameborder="0" height="105" marginheight="0" marginwidth="0" scrolling="no" src="http://myfin.by/scripts/informer/informer.php" width="250"></iframe>
+                <iframe src="http://www.nbrb.by/publications/wmastersd.asp?
+lnkcolor=Maroon&amp;bgcolor=e6e6dc&amp;brdcolor=dcdccd" scrolling="no" width="260" height="86" frameborder="0">
+</iframe>
             </div>
 
 			<div class="col-sm-3  col-md-3  contacts">

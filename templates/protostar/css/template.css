@@ -22,17 +22,17 @@ body {
 
 
 .phone {
-    padding: 4% 0;
+    padding: 3% 0 1%;
 }
     .phone span {
         display: inline-block;
-        font-weight: bold;
+        /*font-weight: bold;*/
         color: #fff;
         text-decoration: none;
     }
 
         .phone span a {
-            font-weight: bold;
+            /*font-weight: bold;*/
             color: #fff;
             text-decoration: none;
         }
@@ -47,8 +47,8 @@ body {
     }
 
     .glyphicon-earphone {
-        font-size: 2em;
-        display: inline !important;
+        font-size: 1.5em;
+        /*display: inline !important;*/
         margin-right: -4%;
     }
 
@@ -62,7 +62,7 @@ body {
     background-color: transparent;
     text-align: center;
     height: auto;
-    padding: 5% 0;
+    padding: 4% 0 1%;
 }
 
     .name a {
@@ -70,7 +70,7 @@ body {
         color: #fff;
         text-decoration: none;
         font-weight: 600;
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
         .name a:hover {
@@ -98,7 +98,7 @@ body {
     background-color: #ffffff;
     color: #000;
     margin-bottom: 20px;
-    padding: 5%;
+    padding: 1% 5% 5% 5%;
 }
 
 
@@ -145,10 +145,48 @@ body {
         margin: 40px 0;
     }
 
-p.video {
 
+/*Хлебные крошки*/
+.breadcrumb {
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 3% 0 0 5%;
 }
 
+/*Страница контактов*/
+.page-contacts td {
+    vertical-align: top;
+}
+
+    .page-contacts td:nth-child(odd) {
+        width: 3%;
+    }
+
+    .page-contacts td:nth-child(even) {
+        width: 47%;
+    }
+
+.page-contacts h2 {
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 8%;
+}
+
+.page-contacts p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+    /*Форма обратной связи*/
+    .form_back {
+        background-color: deepskyblue;
+    }
+
+
+    /*Модуль карты*/
+    .map_window {
+        height: 300px;
+    }
 
 
 /*------------------------------------*\
@@ -169,6 +207,11 @@ p.video {
     color: #dedede;
     font-size: 110%;
     padding: 4.1% 15px;
+    text-shadow:
+        -1px -1px 0 red,
+        1px -1px 0 red,
+        -1px 1px 0 red,
+        1px 1px 0 red;
 }
 
 .copyright {
@@ -215,11 +258,11 @@ p.video {
     background-color: #fff;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+.nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
     background-color: #1e2023;
 }
 
-    .nav-pills > li:hover, .nav-pills > li.active {
+    .nav-pills > li:hover {
         background-color: #1e2023;
         width: 165px;
     }
@@ -228,7 +271,7 @@ p.video {
             display: none;
         }
 
-        .nav-pills > li:hover span, .nav-pills > li.active span {
+        .nav-pills > li:hover span {
             display: inline-block;
             max-width: 80px;
         }
@@ -240,7 +283,7 @@ p.video {
             padding: 0;
         }
 
-        .nav-pills > li:hover a, .nav-pills > li.active a {
+        .nav-pills > li:hover a {
             background-color: #1e2023;
             color: #fff;
             padding: 0;

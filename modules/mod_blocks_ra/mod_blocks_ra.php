@@ -139,10 +139,10 @@ if ($url == '/')
     <!-- Начало блоков на главной -->
     <div class="block-wrapper col-md-12">
         <?php for ($i = 0; $i < $qtySlides; $i++) { ?>
-            <a class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
+            <a id="ablock" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
                 <div class="block-img" id="<?php echo 'block'.$i ?>" style="background-image: url('<?php echo $params->get('img'.$i); ?>');">
                     <div class="block-hover"></div>
-                    <p><?php echo $params->get('txt'.$i); ?></p>
+                    <p class="titleblock"><?php echo $params->get('txt'.$i); ?></p>
                 </div>
             </a>
         <?php } ?>
@@ -156,10 +156,10 @@ for ($vm = 0; $vm < $qtySlides; $vm++) {
 
         <div class="block-wrapper col-md-12">
             <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
-                <a class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vm]; ?>">
+                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vm]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
-                        <p class="titleblock"><?php echo $titleblock[$vmi]; ?></p>
+                        <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
                     </div>
                 </a>
             <?php } ?>

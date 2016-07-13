@@ -28,5 +28,11 @@ window.onload = function () {
     );
 
     //скрываем блок если у него нет текстового описания
-    
+    var obsh = document.getElementsByClassName('titleblock'); //создание массива
+
+    /*for (var o=0; o <= obsh.length; o++) {
+        if (obsh[o].textContent == "") {
+            document.getElementById('ablock' + o).style.display='none';
+        }
+    }*/
 };
