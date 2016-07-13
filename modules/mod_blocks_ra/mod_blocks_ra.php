@@ -41,7 +41,6 @@ $menusid = 'SELECT kqgk0_categories.id FROM kqgk0_categories LEFT JOIN kqgk0_men
 $db->setQuery($menusid);
 for ($c = 0; $c <= 0; $c++) {
     $menusid = $db->loadColumn($c);
-    ?><pre><?php print_r($menusid); ?></pre><?php
 }
 
 //составляем запрос в БД на выборку пунктов меню
@@ -55,34 +54,21 @@ $menus->where($db->quoteName('menutype') . ' = 1');
 $db->setQuery($menus);
 for ($c = 0; $c <= 0; $c++) {
     $menus = $db->loadColumn($c);
-    ?><pre><?php print_r($menus); ?></pre><?php
 }
 
 //проверка на то, в какой блоке находится пользователь
-function proverka($menusid, $menus, $url) {
-    $all = array_combine ($menusid, $menus);
-
-    foreach ($all as $value) {
-        if ($url === $menus) {
-            echo $menusid;
-        } else {/*ничего не происходит*/}
-    };
-
-
-
-    //if ($url == '/'.$menus) {
-
-    //}
-};
-
-$arr = array_combine ($menusid, $menus);
-?><pre><?php print_r($arr); ?></pre><?php
-
-foreach ($arr as $key => $value) {
-    if ($url == $value) {
-        echo $key;
+/*объединение массивов с id и с url категорий*/
+$all = array_combine ($menusid, $menus);
+/**/?><!--<pre>массив id и url категорий<br/><?php /*print_r($all); */?></pre>--><?php
+/*определение id категории блока в котором находится пользователь*/
+$finishmenuid = 0;
+while (list($menuid, $menuurl) = each($all)){
+    if ('/'.$menuurl == $url) {
+        //echo '<pre> id категории в которой находится пользователь<br/>'.$menuid.'</pre>';
+        $finishmenuid = $menuid;
     }
-};
+}
+
 
 //составляем запрос в БД на выборку названий и ссылок
     $titleblock->select(
@@ -90,40 +76,40 @@ foreach ($arr as $key => $value) {
             array('title')
         ));
     $titleblock->from($db->quoteName('kqgk0_content'));
-    $titleblock->where($db->quoteName('catid') . ' = ' . $menusid[3]);
+    $titleblock->where($db->quoteName('catid') . ' = ' . $finishmenuid);
 
     $aliasblock->select(
         $db->quoteName(
             array('alias')
         ));
     $aliasblock->from($db->quoteName('kqgk0_content'));
-    $aliasblock->where($db->quoteName('catid') . ' = ' . $menusid[3]);
+    $aliasblock->where($db->quoteName('catid') . ' = ' . $finishmenuid);
 
     $idblock->select(
         $db->quoteName(
             array('id')
         ));
     $idblock->from($db->quoteName('kqgk0_content'));
-    $idblock->where($db->quoteName('catid') . ' = ' . $menusid[3]);
+    $idblock->where($db->quoteName('catid') . ' = ' . $finishmenuid);
 
 
 //тестово выводим результаты всех запросов
 $db->setQuery($titleblock);
 for ($c = 0; $c <= 0; $c++) {
     $titleblock = $db->loadColumn($c);
-    ?><pre><?php print_r($titleblock); ?></pre><?php
+    /**/?><!--<pre>название блоков подкатегорий<br/><?php /*print_r($titleblock); */?></pre>--><?php
 }
 
 $db->setQuery($aliasblock);
 for ($c = 0; $c <= 0; $c++) {
     $aliasblock = $db->loadColumn($c);
-    ?><pre><?php print_r($aliasblock); ?></pre><?php
+    /**/?><!--<pre>ссылки блоков подкатегорий<br/><?php /*print_r($aliasblock); */?></pre>--><?php
 }
 
 $db->setQuery($idblock);
 for ($c = 0; $c <= 0; $c++) {
     $idblock = $db->loadColumn($c);
-    ?><pre><?php print_r($idblock); ?></pre><?php
+    /**/?><!--<pre>id материалов блоков подкатегорий<br/><?php /*print_r($idblock); */?></pre>--><?php
 }
 
 ?>
@@ -173,7 +159,7 @@ for ($vm = 0; $vm < $qtySlides; $vm++) {
                 <a class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vm]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
-                        <p><?php echo $titleblock[$vmi]; ?></p>
+                        <p class="titleblock"><?php echo $titleblock[$vmi]; ?></p>
                     </div>
                 </a>
             <?php } ?>

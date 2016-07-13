@@ -20,11 +20,13 @@ window.onload = function () {
             document.getElementById('img-slider').src='/images/blocks/big-img/slide'+number+'.png';
 
             //изменяем текст на слайдере в зависимости от того, на какой блок наведен курсор
-
             var location = jQuery('.txt-slider');
 
             location.removeClass('slide-active');
             location.eq(number).addClass('slide-active');
         }
     );
+
+    //скрываем блок если у него нет текстового описания
+    
 };
