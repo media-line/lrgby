@@ -106,17 +106,18 @@ body {
     background-color: #ffffff;
     color: #000;
     margin-bottom: 20px;
-    padding: 5%;
+    /*padding: 5%;*/
 }
 
 .page-header {
     border-bottom: none;
     padding: 0;
-    margin: 40px 0 50px;
+    margin: -20px 0 50px;
 }
 
     .page-header h2 {
         font-size: 3rem;
+        margin-left: 5%;
     }
 
 .subheading-category {
@@ -150,10 +151,16 @@ body {
 .breadcrumb {
     margin-bottom: 0;
     border-radius: 0;
-    padding: 3% 0 0 5%;
+    padding: 4% 0 4% 5%;
 }
 
 /*Страница контактов*/
+.page-contacts {
+    margin-left: 5%;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
 .page-contacts td {
     vertical-align: top;
 }
@@ -179,13 +186,85 @@ body {
 
     /*Форма обратной связи*/
     .form_back {
-        background-color: deepskyblue;
+        background-color: #0084ff;
+        padding: 5% 5% 1% 5%;
+    }
+
+    .form_back h3 {
+        color: #fff;
+        font-size: 3rem;
+    }
+
+    input.input, textarea.input {
+        background-color: #0084ff;
+        color: #95cafb;
+        border-radius: 1px;
+        border: 1px solid #95cafb;
+        padding: 19px 24px;
+        width: 100%;
+    }
+
+    textarea.input {
+        height: 150px;
+    }
+
+    input.input:focus, textarea.input:focus {
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+    .file {
+        color: #fff;
+    }
+
+        .file label {
+            font-size: 1.2rem;
+            font-weight: 100;
+            margin-bottom: 28px;
+        }
+
+            .file label input {
+                width: 100%;
+                height: auto;
+            }
+
+    .field {
+        margin-bottom: 30px;
+    }
+
+    button.form-send {
+        width: 100%;
+        background-color: #0084ff;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 1px;
+        font-size: 2rem;
+        padding: 25px 0;
+    }
+
+    button.form-send:hover, button.form-send:active {
+        background-color: #fff;
+        color: #0084ff;
+        font-weight: bold;
+    }
+
+    .close {
+        display: none;
     }
 
 
     /*Модуль карты*/
     .map_window {
-        height: 300px;
+        height: 520px;
+    }
+
+    .ymaps-2-1-41-ground-pane {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray; / IE 6-9 /
     }
 
 
@@ -258,7 +337,11 @@ body {
     background-color: #fff;
 }
 
-.nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    background-color: #fff;
+}
+
+.nav-pills > li.active > a:hover {
     background-color: #1e2023;
 }
 
@@ -292,4 +375,12 @@ body {
             .nav > li > a > img {
                 max-width: none;
                 padding-right: 5px;
+            }
+
+            .nav > li:hover > a > img {
+                -webkit-filter: invert(100%);
+                -moz-filter: invert(100%);
+                -ms-filter: invert(100%);
+                -o-filter: invert(100%);
+                filter: invert(100%);
             }

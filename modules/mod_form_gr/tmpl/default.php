@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 				<div class="modal-content modal-content-form">
 	<?php } ?>
 
-	<form id="form_back_<?php echo $module->id; ?>" name="form" method="post" enctype="multipart/form-data" class="clearfix">
+	<form id="form_back_<?php echo $module->id; ?>" name="form" method="post" enctype="multipart/form-data" class="clearfix row">
 		<div class="page-head">
 			<span><?php echo $params->get('head'); ?></span>
             <div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
@@ -34,24 +34,31 @@ defined('_JEXEC') or die;
 									<?php echo $fields[$i]['title']; ?> <span><?php if ($fields[$i]['required']) { echo '*'; } ?></span>
 								</div>							
 							<?php } ?>
-							<div class="field">
-								<?php switch ($fields[$i]['type']) {
-									case 'text': ?>
-										<input class="input" type="text" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']) { echo '*'; } ?>">
-										<?php break;
+							<?php if ($i%2==0) {
+							    echo '<div class="col-md-4  bigfield">';
+                            }?>
+                                <div class="field  field<?php echo $i?>">
+                                    <?php switch ($fields[$i]['type']) {
+                                        case 'text': ?>
+                                            <input class="input" type="text" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']) { echo '*'; } ?>">
+                                            <?php break;
 
-									case 'textarea': ?>
-										<textarea class="input" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']) { echo '*'; } ?>"></textarea>
-										<?php break;							
-								} ?>
-							</div>
+                                        case 'textarea': ?>
+                                            <textarea class="input textarea" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']) { echo '*'; } ?>"></textarea>
+                                            <?php break;
+                                    } ?>
+                                </div>
+                            <?php if ($i%2!=0) {
+                                echo '</div>';
+                            }?>
 					<?php } else { ?>
 						<div class="text-separator ">
-							<?php echo $fields[$i]['title']; ?> <span><?php if ($fields[$i]['required']) { echo '*'; } ?></span>
+							<?php echo $fields[$i]['title']; ?> <span><?php if ($fields[$i]['required']) { echo '*'; } ?></span><br/>
 						</div>					
 					<?php } ?>
 				<?php } ?>
-				<div class="file">
+                </div>
+				<div class="file col-md-4">
 					<?php if ($params->get('file_on')) { ?>
 						<label><i class="icon-pdf-file-format-symbol"></i><input type="file" name="file"><span><?php echo $params->get('file_text'); ?></span></label>
 					<?php } ?>	
