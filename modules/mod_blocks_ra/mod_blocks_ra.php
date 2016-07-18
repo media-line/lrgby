@@ -9,20 +9,25 @@
 // no direct access
 defined('_JEXEC') or die;
 
+
 //подключаем css-файл модуля
 $document =JFactory::getDocument();
 $document->addStyleSheet('modules/mod_blocks_ra/tmpl/css/mod_blocks.css');
+
 
 //подключаем js-файл модуля
 $document =JFactory::getDocument();
 $document->addScript('modules/mod_blocks_ra/tmpl/js/mod_blocks_ra.js');
 
+
 //задаем количество блоков в модуле
 $qtySlides = 4;
+
 
 //получение url текущей страницы
 $uri = &JFactory::getURI();
 $url = $uri->toString(array('path', 'query', 'fragment'));
+
 
 //получение списка материалов категории
 //1.подключение к БД
@@ -30,6 +35,7 @@ $db=& JFactory::getDbo();
 
 // Получаем объекты запросов (JDatabaseQuery)
 $titleblock = $db->getQuery(true);
+$introtext = $db->getQuery(true);
 $aliasblock = $db->getQuery(true);
 $menus = $db->getQuery(true);
 $idblock = $db->getQuery(true);
@@ -42,6 +48,7 @@ $db->setQuery($menusid);
 for ($c = 0; $c <= 0; $c++) {
     $menusid = $db->loadColumn($c);
 }
+
 
 //составляем запрос в БД на выборку пунктов меню
 $menus->select(
@@ -56,10 +63,11 @@ for ($c = 0; $c <= 0; $c++) {
     $menus = $db->loadColumn($c);
 }
 
+
 //проверка на то, в какой блоке находится пользователь
 /*объединение массивов с id и с url категорий*/
 $all = array_combine ($menusid, $menus);
-/**/?><!--<pre>массив id и url категорий<br/><?php /*print_r($all); */?></pre>--><?php
+
 /*определение id категории блока в котором находится пользователь*/
 $finishmenuid = 0;
 while (list($menuid, $menuurl) = each($all)){
@@ -76,40 +84,52 @@ while (list($menuid, $menuurl) = each($all)){
             array('title')
         ));
     $titleblock->from($db->quoteName('kqgk0_content'));
-    $titleblock->where($db->quoteName('catid') . ' = ' . $finishmenuid);
+    $titleblock->where($db->quoteName('catid') . ' = 9');
+
+    $introtext->select(
+            $db->quoteName(
+                array('introtext')
+            ));
+    $introtext->from($db->quoteName('kqgk0_content'));
+    $introtext->where($db->quoteName('catid') . ' = 9');
 
     $aliasblock->select(
         $db->quoteName(
             array('alias')
         ));
     $aliasblock->from($db->quoteName('kqgk0_content'));
-    $aliasblock->where($db->quoteName('catid') . ' = ' . $finishmenuid);
+    $aliasblock->where($db->quoteName('catid') . ' = 9');
 
     $idblock->select(
         $db->quoteName(
             array('id')
         ));
     $idblock->from($db->quoteName('kqgk0_content'));
-    $idblock->where($db->quoteName('catid') . ' = ' . $finishmenuid);
+    $idblock->where($db->quoteName('catid') . ' = 9');
 
 
-//тестово выводим результаты всех запросов
+//собираем результаты всех запросов
 $db->setQuery($titleblock);
 for ($c = 0; $c <= 0; $c++) {
     $titleblock = $db->loadColumn($c);
-    /**/?><!--<pre>название блоков подкатегорий<br/><?php /*print_r($titleblock); */?></pre>--><?php
+?><pre>название блоков подкатегорий<br/><?php print_r($titleblock); ?></pre><?php
+}
+
+
+
+$db->setQuery($introtext);
+for ($c = 0; $c <= 0; $c++) {
+    $introtext = $db->loadColumn($c);
 }
 
 $db->setQuery($aliasblock);
 for ($c = 0; $c <= 0; $c++) {
     $aliasblock = $db->loadColumn($c);
-    /**/?><!--<pre>ссылки блоков подкатегорий<br/><?php /*print_r($aliasblock); */?></pre>--><?php
 }
 
 $db->setQuery($idblock);
 for ($c = 0; $c <= 0; $c++) {
     $idblock = $db->loadColumn($c);
-    /**/?><!--<pre>id материалов блоков подкатегорий<br/><?php /*print_r($idblock); */?></pre>--><?php
 }
 
 ?>
@@ -132,10 +152,38 @@ if ($url == '/')
 
 <?php } else {/*тут ничего не должно быть*/} ?>
 
+
+
+
+
+    <!-- Блоки внутри категорий -->
 <?php
-if ($url == '/')
-{
-?>
+    if ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe') { ?>
+        <div class="block-wrapper col-md-12">
+            <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
+                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                    <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
+                        <div class="block-hover"></div>
+                        <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
+                        <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
+                    </div>
+                </a>
+            <?php } ?>
+        </div>
+<?php } elseif ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/7-kompozitnye-metallopolimernye-truby-deepipe-composite') { ?>
+        <!-- Начало блоков в первом блоке -->
+        <div class="block-wrapper col-md-12">
+            <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
+                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                    <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
+                        <div class="block-hover"></div>
+                        <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
+                        <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
+                    </div>
+                </a>
+            <?php } ?>
+        </div>
+    <?php } else { ?>
     <!-- Начало блоков на главной -->
     <div class="block-wrapper col-md-12">
         <?php for ($i = 0; $i < $qtySlides; $i++) { ?>
@@ -147,22 +195,4 @@ if ($url == '/')
             </a>
         <?php } ?>
     </div>
-<?php } ?>
-
-    <!-- Блоки внутри категорий -->
-<?php
-for ($vm = 0; $vm < $qtySlides; $vm++) {
-    if ($url === '/'.$menus[$vm]) { ?>
-
-        <div class="block-wrapper col-md-12">
-            <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vm]; ?>">
-                    <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
-                        <div class="block-hover"></div>
-                        <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
-                    </div>
-                </a>
-            <?php } ?>
-        </div>
-<?php } ?>
 <?php } ?>

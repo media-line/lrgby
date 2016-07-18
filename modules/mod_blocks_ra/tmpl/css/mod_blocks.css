@@ -37,13 +37,22 @@
     }
 }
 
+.introtext {
+    position: absolute;
+    top: 55%;
+    color: #fff;
+    padding: 0 6%;
+    min-width: 95%;
+}
+
 .titleblock {
     padding: 0 15%;
     position: absolute;
     color: #fff;
-    top: 34%;
+    top: 15%;
     font-size: 2rem;
     font-weight: 600;
+    min-width: 95%;
 }
 
 .block-hover {
@@ -96,19 +105,19 @@
 
 @media all and (min-width: 1001px){
     .txt-slider {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
 }
 
 @media all and (max-width: 1000px) and (min-width: 701px) {
     .txt-slider {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
 @media all and (max-width: 700px) {
     .txt-slider {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 

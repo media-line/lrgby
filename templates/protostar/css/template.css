@@ -125,7 +125,7 @@ body {
 }
 
 .category-desc {
-    width: 60%;
+    /*width: 60%;*/
 }
 
     .category-desc h2 {
@@ -146,6 +146,14 @@ body {
         margin: 40px 0;
     }
 
+    .flright {
+        float: right;
+    }
+
+
+.fulltext {
+    padding: 0 5% 5% 5%;
+}
 
 /*Хлебные крошки*/
 .breadcrumb {
