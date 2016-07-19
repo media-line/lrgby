@@ -155,11 +155,20 @@ body {
     padding: 0 5% 5% 5%;
 }
 
+    .bodycontacts .fulltext {
+        padding: 0;
+    }
+
+    .item-pagecontacts {
+        background-color: #fff;
+    }
+
 /*Хлебные крошки*/
 .breadcrumb {
     margin-bottom: 0;
     border-radius: 0;
     padding: 4% 0 4% 5%;
+    background-color: #fff;
 }
 
 /*Страница контактов*/

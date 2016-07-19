@@ -51,7 +51,20 @@
     {
         $logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
     }
-?>
+
+$menu = JSite::getMenu();
+
+$active = $menu->getActive();
+
+$active_pageclass_sfx = '';
+
+if (is_object($active)){
+
+    $active_pageclass_sfx = $active->params->get('pageclass_sfx');
+
+}
+
+    ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -85,7 +98,7 @@
 	<link rel="stylesheet" href="/templates/protostar/css/template.css">
 </head>
 
-<body>
+<body class="body<?php echo $active_pageclass_sfx; ?>">
 	<div class="container">
 
 		<div class="row  header">
