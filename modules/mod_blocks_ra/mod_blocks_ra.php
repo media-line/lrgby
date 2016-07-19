@@ -25,13 +25,13 @@ $qtySlides = 4;
 
 
 //получение url текущей страницы
-$uri = &JFactory::getURI();
+$uri = JFactory::getURI();
 $url = $uri->toString(array('path', 'query', 'fragment'));
 
 
 //получение списка материалов категории
 //1.подключение к БД
-$db=& JFactory::getDbo();
+$db= JFactory::getDbo();
 
 // Получаем объекты запросов (JDatabaseQuery)
 $titleblock = $db->getQuery(true);
@@ -112,7 +112,6 @@ while (list($menuid, $menuurl) = each($all)){
 $db->setQuery($titleblock);
 for ($c = 0; $c <= 0; $c++) {
     $titleblock = $db->loadColumn($c);
-?><pre>название блоков подкатегорий<br/><?php print_r($titleblock); ?></pre><?php
 }
 
 
@@ -152,16 +151,12 @@ if ($url == '/')
 
 <?php } else {/*тут ничего не должно быть*/} ?>
 
-
-
-
-
     <!-- Блоки внутри категорий -->
 <?php
     if ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe') { ?>
         <div class="block-wrapper col-md-12">
             <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
                         <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -170,11 +165,26 @@ if ($url == '/')
                 </a>
             <?php } ?>
         </div>
-<?php } elseif ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/7-kompozitnye-metallopolimernye-truby-deepipe-composite') { ?>
+<?php } elseif ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/8-modulnye-fitingi-deepipe-elements') { ?>
         <!-- Начало блоков в первом блоке -->
         <div class="block-wrapper col-md-12">
-            <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/'.$menus[$vmi].'/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+		          <a id="ablock1" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/deepipe_element_link.pdf ">
+		            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('/images/blocks/block1.png');">
+		              <div class="block-hover"></div>
+		              <p class="titleblock" id="titleblock"><?php echo 'Таблица сборки'; ?></p>
+		              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
+		            </div>
+		          </a>
+		          <a id="ablock2" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/booklet_3-2-1.pdf
+">
+		            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('/images/blocks/block2.png');">
+		              <div class="block-hover"></div>
+		              <p class="titleblock" id="titleblock"><?php echo 'Общая таблица модульных элементов'; ?></p>
+		              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
+		            </div>
+		          </a>
+            <?php for ($vmi = 2; $vmi < $qtySlides; $vmi++) { ?>
+                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
                         <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -183,6 +193,19 @@ if ($url == '/')
                 </a>
             <?php } ?>
         </div>
+    <?php } elseif ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/7-kompozitnye-metallopolimernye-truby-deepipe-composite') { ?>
+      <!-- Начало блоков в первом блоке -->
+      <div class="block-wrapper col-md-12">
+        <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
+          <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/8-modulnye-fitingi-deepipe-elements/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
+              <div class="block-hover"></div>
+              <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
+              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
+            </div>
+          </a>
+        <?php } ?>
+      </div>
     <?php } else { ?>
     <!-- Начало блоков на главной -->
     <div class="block-wrapper col-md-12">
