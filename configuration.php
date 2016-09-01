@@ -15,7 +15,7 @@ class JConfig {
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
-	public $db = 'lrgby';
+	public $db = 'lrg_db';
 	public $dbprefix = 'kqgk0_';
 	public $live_site = '';
 	public $secret = 'MoN0xLK5pDukCeNZ';

@@ -156,7 +156,7 @@ if ($url == '/')
     if ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe') { ?>
         <div class="block-wrapper col-md-12">
             <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                <a id="<?php echo 'ablock'.$vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
                         <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -168,23 +168,23 @@ if ($url == '/')
 <?php } elseif ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/8-modulnye-fitingi-deepipe-elements') { ?>
         <!-- Начало блоков в первом блоке -->
         <div class="block-wrapper col-md-12">
-		          <a id="ablock1" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/deepipe_element_link.pdf ">
-		            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('/images/blocks/block1.png');">
+		          <a id="ablock0" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/deepipe_element_link.pdf ">
+		            <div class="block-img" id="block0" style="background-image: url('/images/blocks/block1.png');">
 		              <div class="block-hover"></div>
 		              <p class="titleblock" id="titleblock"><?php echo 'Таблица сборки'; ?></p>
 		              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
 		            </div>
 		          </a>
-		          <a id="ablock2" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/booklet_3-2-1.pdf
+		          <a id="ablock1" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/booklet_3-2-1.pdf
 ">
-		            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('/images/blocks/block2.png');">
+		            <div class="block-img" id="block1" style="background-image: url('/images/blocks/block2.png');">
 		              <div class="block-hover"></div>
 		              <p class="titleblock" id="titleblock"><?php echo 'Общая таблица модульных элементов'; ?></p>
 		              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
 		            </div>
 		          </a>
             <?php for ($vmi = 2; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                <a id="<?php echo 'ablock'.$vmi ?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
                         <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -196,23 +196,23 @@ if ($url == '/')
     <?php } elseif ($url == '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/9-scw-svarka') { ?>
         <!-- Начало блоков в первом блоке -->
         <div class="block-wrapper col-md-12">
-		          <a id="ablock1" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/deepipe_element_link.pdf ">
-		            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('/images/blocks/block1.png');">
+		          <a id="ablock0" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/deepipe_element_link.pdf ">
+		            <div class="block-img" id="block0" style="background-image: url('/images/blocks/block1.png');">
 		              <div class="block-hover"></div>
 		              <p class="titleblock" id="titleblock"><?php echo 'Таблица сборки'; ?></p>
 		              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
 		            </div>
 		          </a>
-		          <a id="ablock2" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/booklet_3-2-1.pdf
+		          <a id="ablock1" class="item col-xs-12  col-sm-6  col-md-3" href="http://www.deepipe.ru/advans/files/doc/booklet_3-2-1.pdf
 ">
-		            <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('/images/blocks/block2.png');">
+		            <div class="block-img" id="block1" style="background-image: url('/images/blocks/block2.png');">
 		              <div class="block-hover"></div>
 		              <p class="titleblock" id="titleblock"><?php echo 'Общая таблица модульных элементов'; ?></p>
 		              <p class="introtext" id="introtext"><?php echo $introtext[$vmi]; ?></p>
 		            </div>
 		          </a>
             <?php for ($vmi = 2; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                <a id="<?php echo 'ablock'.$vmi ?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
                         <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -240,7 +240,7 @@ if ($url == '/')
 		            </div>
 		          </a>
             <?php for ($vmi = 2; $vmi < $qtySlides; $vmi++) { ?>
-                <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+                <a id="<?php echo 'ablock'.$vmi ?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
                     <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
                         <div class="block-hover"></div>
                         <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -253,7 +253,7 @@ if ($url == '/')
       <!-- Начало блоков в первом блоке -->
       <div class="block-wrapper col-md-12">
         <?php for ($vmi = 0; $vmi < $qtySlides; $vmi++) { ?>
-          <a id="ablock<?php echo $vmi?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
+          <a id="<?php echo 'ablock'.$vmi ?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo '/svarnye-metallopolimernye-truby-i-fitingi-deepipe/'.$idblock[$vmi].'-'.$aliasblock[$vmi]; ?>">
             <div class="block-img" id="<?php echo 'block'.$vmi ?>" style="background-image: url('<?php echo $params->get('img'.$vmi); ?>');">
               <div class="block-hover"></div>
               <p class="titleblock" id="titleblock"><?php echo $titleblock[$vmi]; ?></p>
@@ -266,7 +266,7 @@ if ($url == '/')
     <!-- Начало блоков на главной -->
     <div class="block-wrapper col-md-12">
         <?php for ($i = 0; $i < $qtySlides; $i++) { ?>
-            <a id="ablock" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
+            <a id="<?php echo 'ablock'.$i ?>" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
                 <div class="block-img" id="<?php echo 'block'.$i ?>" style="background-image: url('<?php echo $params->get('img'.$i); ?>');">
                     <div class="block-hover"></div>
                     <p class="titleblock"><?php echo $params->get('txt'.$i); ?></p>

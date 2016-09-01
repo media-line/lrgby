@@ -9,6 +9,10 @@ body {
     width: 100%;
 }
 
+img {
+    margin: 10px;
+}
+
 
 
 
@@ -83,6 +87,12 @@ body {
     padding: 0;
 }
 
+@media all and (max-width: 1000px) {
+    .phone {
+        text-align: center;
+    }
+}
+
 
 
 
@@ -95,7 +105,7 @@ body {
 }
 
 .blog {
-    background-color: #ffffff;
+    background-color: #DFDFDF;
     color: #000;
     margin-bottom: 20px;
     padding: 1% 5% 5% 5%;
@@ -103,7 +113,7 @@ body {
 
 
 .item-page {
-    background-color: #ffffff;
+    background-color: #DFDFDF;
     color: #000;
     margin-bottom: 20px;
     /*padding: 5%;*/
@@ -128,16 +138,17 @@ body {
     /*width: 60%;*/
 }
 
-    .category-desc h2 {
-        font-size: 2.08rem;
+    .category-desc h2, .fulltext h2 {
+        font-size: 1.98rem;
         font-weight: bold;
         text-transform: uppercase;
         margin: 25px 0;
     }
 
-    .category-desc p {
-        font-size: 1.92rem;
-        line-height: 2;
+    .category-desc p, .fulltext p {
+        font-size: 1.82rem;
+        line-height: 1.3;
+        text-align: justify;
     }
 
     .category-desc ul {
@@ -145,6 +156,19 @@ body {
         line-height: 2.3;
         margin: 40px 0;
     }
+
+    .category-desc img, .fulltext img {
+        height: 200px;
+        display: inline-block;
+    }
+
+        @media all and (max-width: 1000px) {
+            .category-desc img, .fulltext img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
 
     .flright {
         float: right;
@@ -160,7 +184,7 @@ body {
     }
 
     .item-pagecontacts {
-        background-color: #fff;
+        background-color: #DFDFDF;
     }
 
 /*Хлебные крошки*/
@@ -168,7 +192,7 @@ body {
     margin-bottom: 0;
     border-radius: 0;
     padding: 4% 0 4% 5%;
-    background-color: #fff;
+    background-color: #DFDFDF;
 }
 
 /*Страница контактов*/
@@ -285,6 +309,12 @@ body {
     }
 
 
+/*Слайдер*/
+#img-slider, .nav-pills img {
+    margin: 0;
+}
+
+
 /*------------------------------------*\
     #Подвал (Footer)
 \*------------------------------------*/
@@ -300,14 +330,16 @@ body {
 
 .contacts {
     background-color: transparent;
-    color: #dedede;
-    font-size: 110%;
-    padding: 4.1% 15px;
-    text-shadow:
-        -1px -1px 0 red,
-        1px -1px 0 red,
-        -1px 1px 0 red,
-        1px 1px 0 red;
+    padding: 3.1% 15px;
+    font-size: 104%;
+    font-weight: bold;
+    color: #E6E6DC;
+}
+
+@media all and (max-width: 1000px) {
+    .contacts {
+        text-align: center;
+    }
 }
 
 .copyright {
